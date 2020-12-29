@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Stopwatch</title>
     <link rel="stylesheet" href="style.css" />
-   <body>
-       <h1> Stopwatch </h1>
-       <span>0:00:00</span>
-       <script src="script.js"></script>
-       <button>
-           <image src="https://www.google.com/imgres?imgurl=https%3A%2F%2Fstatic.thenounproject.com%2Fpng%2F3426050-200.png&imgrefurl=https%3A%2F%2Fthenounproject.com%2Fterm%2Fvideo-play%2F3426050%2F&tbnid=dvOUExycP-bAmM&vet=12ahUKEwjaieDL0_LtAhWqJrcAHY8gCj4QMygLegUIARD5AQ..i&docid=2D5-8UOdMezVvM&w=200&h=200&itg=1&q=play%20icon&hl=en&ved=2ahUKEwjaieDL0_LtAhWqJrcAHY8gCj4QMygLegUIARD5AQ" />
-           <image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAMAAACahl6sAAAAaVBMVEX///8AAACnp6cHBwdHR0c3NzcXFxfT09N7e3uvr6+fn5/8/Pzy8vL29vZfX19iYmJSUlLLy8sbGxuSkpLp6ek7Ozu4uLjc3NyCgoJMTEx1dXW+vr4jIyNYWFgyMjIPDw+MjIwrKytubm7gvJMaAAABsUlEQVR4nO3b3W6CQBBA4VlAEUHxHxWt2vd/yGa1sbDspt5M1pjz3bGZJnNQewUiAAAAAAAAAAAAAAAAAAAAAAAAwL9m03nmqJPSnWr2C2focFzGWDeoXRmPU3/J8ugbMucq0tIebepd0aS9krl/yGxnsfZ2VePAiubU+XYloSEzibd63/r3/vc8zpK/qS/P0GPq8i4fycJus3Z+2uXentbP6429XOXOn25G9rjV3/ElW3tXB6elXTF7Xub28jiYmjqfW1T2ro6Hx+kwZPhrSAhRQIgQooMQIUQHIUKIDkKEEB2ECCE6CBFCdBAihOggRAjRQYgQooMQIUQHIUKIDkKEEB2ECCE6CBFCdBAihOggRAjRQYgQooMQIUTHx4TYJ7HTwfPt92fID8/Lxl7W7pBc7XGhu9/LartMlhQ9ic3rPEM+uz/Qv+8PFeuLPW0iLt+1M0GdF0jOwaFbvNUdWWjFc2coD7wtY8wu2uKuzc2/4aj31lERKLnGWdqr+vYsmU6cfwDLre979T6fx121mzpaz3s6TeEMJe6bMQAAAAAAAAAAAAAAAAAAAAAAAMBn+wEa1hcjGfEIKQAAAABJRU5ErkJggg==" />
-       </button>
-       <button>
-           <image src="data:image/png;base64,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" />
-       </button>
-       <script src="script.js"></script>
-      </body>
+  <body>
+    <h1>Stopwatch</h1>
+  <span>00:00:00</span>
+
+  <button>
+    <img src="icons/play-button.svg" />
+    <img src="icons/pause-button.svg" />
+  </button>
+  <button>
+    <img src="icons/reset-button.svg" />
+  </button>
+	<script src="script.js"></script>
+</body>
       
